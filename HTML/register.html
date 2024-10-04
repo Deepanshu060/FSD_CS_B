@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div id="register">
+    <h1>Register</h1>
+    <p>please fill in this form to create an account </p>
+    <hr>
+    <form name="register" method="post" action="/createUser">
+       <label for="email">Email</label> <br>
+        <input type="email" name="f1" placeholder="Enter your email"><br>
+        <label for="password">Password</label> <br>
+        <input type="password" name="f2" placeholder="Enter your Password"><br>
+         <label for="confirm password">Confirm Password </label><br>
+        <input type="password" name="f3" placeholder="Enter your Password"><br>
+        <p id="line">By clicking an account you agree to <a href="#">terms and condition</a></p><br>
+        <input type="submit" value="Register" id="b1">
+        <input type="reset" value="Reset" id="b2">
+    </form>
+    <div id="sign">
+        <p>Already have an account <a href="#">Sign in</a></p>
+    </div>
+</div>
+
+</body>
+</html>

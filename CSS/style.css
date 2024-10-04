@@ -1,0 +1,44 @@
+body{
+    background-color: yellow;
+}
+
+#register{
+    display: block;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: white;
+    height: 400px;
+    width: 40%;
+    border: 2px solid black;
+}
+h1,p{
+    margin-left: 10%;
+}
+form{
+    margin-left: 10%;
+}
+#sign{
+    text-align: center;
+    background-color: lightblue;
+    height: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}
+#line{
+    margin-left: 0%;
+}
+input[type="email"]{
+    height: 20px;
+    width: 60%;
+
+}
+#b1{
+    background-color: red;
+    color: black;
+    margin-right: 30px;
+}
+#b2{
+    background-color: green;
+    color: black;
+}
