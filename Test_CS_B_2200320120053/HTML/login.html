@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            const u=document.getElementById("f1").value;
+            const p=document.getElementById("f2").value;
+            if(u=="admin" && p=="admin"){   
+                return true;
+            }
+            else{
+                alert("Enter valid username or password");
+                return false;
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body >
+    <form action="Welcome.html" onsubmit="return validate()">
+        User ID <input type="text" id="f1" placeholder="Enter the user id"><br>
+        Password <input type="password" name="" id="f2" placeholder="Enter the password"><br>
+        <input type="submit" value="Login" id="f3" >
+        <input type="reset" name="" id="f4" value="Reset">
+    </form>
+    
+</body>
+</html>

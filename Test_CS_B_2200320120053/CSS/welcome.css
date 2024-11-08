@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+frame {
+    border: none;
+}
+frame[name="frame4"] {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+h1, h2, p {
+    margin: 10px;
+}
+
