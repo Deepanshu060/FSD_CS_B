@@ -6,9 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="details.html">
-        Enter the city <input type="" name="" id="d1"><br>
+    <form id="weather">
+        Enter the city <input type="" name="" id="city"><br>
         <input type="submit" value="Weather report">
     </form>
+    <div id="weatherResult" class="weather-report"></div>
+  
+    <script>
+      document.getElementById("weather").addEventListener("submit", async function(event) {
+        event.preventDefault();
+  
+        const cityName = document.getElementById("city").value;
+        const apiKey = "a7904ab6ce16255647c0dc27b3d6a8ef"; 
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName},IN&appid=${apiKey}&units=metric`;
+
+        try {
+          const response = await fetch(apiUrl);
+          console.log(response);
+          
+          if (!response.ok) throw new Error("City not found");
+  
+          const data = await response.json();
+          const maxTemp = data.main.temp_max;
+          const minTemp = data.main.temp_min;
+  
+          document.getElementById("weatherResult").innerHTML = `
+            <p><strong>City:</strong> ${data.name}</p>
+ <p><strong>Max Temperature:</strong> ${maxTemp}°C</p>
+          <p><strong>Min Temperature:</strong> ${minTemp}°C</p>
+        `;
+      } catch (error) {
+        document.getElementById("weatherResult").innerHTML = "<p>There is some error</p>";
+      }
+    });
+  </script>
 </body>
 </html>
